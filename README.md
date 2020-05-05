@@ -15,7 +15,7 @@ Functionality:
 Programming language: C++
 GUI library: SFML
 
-![](images/vp4.png)
+![](images/vp5.png)
 
 By:
 Mazur Daniela,
