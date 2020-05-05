@@ -106,6 +106,9 @@ struct VoronoiDelaunay {
 
 VoronoiDelaunay getVDEdgesFromCells(const vector<Point> &Sites, const vector<Cell> &Cells);
 
+
+//Input: vector of points, width and height of the window
+//Output: Voronoi and Delaunay triangulation of the points
 VoronoiDelaunay computeTriangulation(vector<Point> points, double width, double height) {
 
 	// add randomness
@@ -194,6 +197,7 @@ VoronoiDelaunay computeTriangulation(vector<Point> points, double width, double 
 	return getVDEdgesFromCells(points, Cells);
 }
 
+// get the corresponding Voronoi diagram and delaunay edges from a vector of voronoi Cells
 VoronoiDelaunay getVDEdgesFromCells(const vector<Point> &points, const vector<Cell> &Cells) {
 	vector<pair<Edge, int> > allEdges;
 	VoronoiDelaunay VD;
