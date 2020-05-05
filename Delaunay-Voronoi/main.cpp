@@ -161,7 +161,7 @@ void createLabel(sf::Text& label, string text, float x, float y) {
 void createLabel(sf::Text& label, float x, float y)
 {
     sf::Font font;
-    if (!font.loadFromFile("arial.ttf")) return;
+    if (!font.loadFromFile("fonts/arial.ttf")) return;
 
     label.setString("Text:");
     label.setFillColor(sf::Color::Black);
@@ -175,7 +175,7 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(width, height), "Voronoi + Triangulation", sf::Style::Close);
     sf::CircleShape circle;
    
-    if (!font.loadFromFile("arial.ttf")) return EXIT_FAILURE;
+    if (!font.loadFromFile("fonts/arial.ttf")) return EXIT_FAILURE;
     sf::RoundedRectangleShape inputBorder;
     sf::RoundedRectangleShape saveBorder;
     sf::RoundedRectangleShape clearBorder;
