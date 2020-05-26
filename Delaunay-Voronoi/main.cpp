@@ -45,7 +45,7 @@ void createSfmlShapes() {
 
      sf::Color delaunayColor, circleColor;
      if (!inverseColor) delaunayColor = sf::Color::White, circleColor = sf::Color(255, 85, 79);
-     else delaunayColor = circleColor = sf::Color::Black;
+     else delaunayColor = sf::Color::Black, circleColor = sf::Color::Black;
      i = 0;
      for (auto e : VD.Delaunay) {
           sf::Vertex line[] = {
@@ -273,6 +273,8 @@ int main() {
                                  ifstream inFile;
                                  inFile.open("points.txt");
                                  double cX, cY;
+                                 points.clear();
+                                 reconstructGUI();
                                  while (inFile >> cX >> cY)
                                  {
                                       addPoint(cX, cY);
@@ -327,7 +329,7 @@ int main() {
              window.draw(circles[i]);
         }
         inputLabel.setString(yText);
-
+        
         window.draw(inputBorder);
         window.draw(saveBorder);
         window.draw(importBorder);

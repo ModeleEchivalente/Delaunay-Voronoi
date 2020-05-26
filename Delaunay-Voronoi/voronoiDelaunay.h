@@ -111,7 +111,7 @@ VoronoiDelaunay getVDEdgesFromCells(const vector<Point> &Sites, const vector<Cel
 //Output: Voronoi and Delaunay triangulation of the points
 VoronoiDelaunay computeTriangulation(vector<Point> points, double width, double height) {
 
-	// add randomness
+	// add some randomness to deal with degenerate cases
 	for (auto &point : points) {
 		float r1 = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / 0.01)) + 0.0005;
 		float r2 = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / 0.01)) + 0.0005;
